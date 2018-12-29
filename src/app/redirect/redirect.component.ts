@@ -16,7 +16,6 @@ export class RedirectComponent implements OnInit {
   ngOnInit() {
     // get current relative path without trailing slash
     const link = this.router.url.substr(1);
-    console.log(link);
 
     // check if link exists in database
     const dbRefLinks = firebase.database().ref().child('links');
@@ -33,7 +32,6 @@ export class RedirectComponent implements OnInit {
 
         // redirect
         const originalUrl = snapLink.child('original').val();
-        console.log(originalUrl);
         window.location.href = (
           originalUrl.startsWith('http://') ||
           originalUrl.startsWith('https://')
