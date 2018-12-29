@@ -1,0 +1,8 @@
+<h1>Link Tracker</h1>
+<p>Insert the link you want to minimize and track</p>
+<input id="link-input" type="text" />
+<button (click)="createMinimizedLink()">Minimize</button>
+<div *ngIf="minimizedLink">
+  <p>Your link has been minimized! You can now reach it and track clicks on it by using the following link instead:</p>
+  <p>{{minimizedLink}}</p>
+</div>
